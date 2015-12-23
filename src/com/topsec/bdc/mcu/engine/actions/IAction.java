@@ -1,69 +1,74 @@
 package com.topsec.bdc.mcu.engine.actions;
 
-import java.util.List;
-
-import com.topsec.bdc.mcu.engine.operations.DataOperation;
-import com.topsec.bdc.platform.core.configuration.GenericConfiguration;
+import com.topsec.bdc.mcu.engine.configuration.IConfiguration;
+import com.topsec.bdc.mcu.engine.resource.IInResource;
+import com.topsec.bdc.mcu.engine.resource.IOutResource;
 import com.topsec.bdc.platform.core.exception.PlatformException;
 
 
-public interface IAction {
+/**
+ * 
+ * 数据处理接口.
+ * 
+ * 数据处理接口.
+ * 
+ * @title IAction
+ * @package com.topsec.bdc.mcu.engine.actions
+ * @author baiyanwei
+ * @version
+ * @date Dec 22, 2015
+ * 
+ */
+public interface IAction extends IConfiguration {
 
     /**
-     * 取得本操作的ID.
+     * 设置运行时的环境上下文如HADOOP，SPARK的配置.
+     * 
+     * @param context
+     */
+    public void setContext(Object... context);
+
+    /**
+     * 运行时的环境上下.
      * 
      * @return
      */
-    public String getActionID();
+    public Object[] getContext();
 
     /**
-     * 设置操作ID.
+     * 设置输入源.
      * 
-     * @param ActionID
+     * @param inputResource
      */
-    public void setActionID(String ActionID);
+    public void setInResource(IInResource... inResource);
 
     /**
-     * 取得操作的执行顺序.
-     * 
-     * @return
-     */
-    public int getActionOrder();
-
-    /**
-     * 设置操作执行顺序.
-     * 
-     * @param ActionOrder
-     */
-    public void setActionOrder(int ActionOrder);
-
-    /**
-     * 取得操作的执行顺序.
+     * 取得输入源.
      * 
      * @return
      */
-    public List<DataOperation> getOperations();
+    public IInResource[] getInputResource();
 
     /**
-     * 设置操作执行顺序.
+     * 设置输入源.
      * 
-     * @param ActionOrder
+     * @param inputResource
      */
-    public void setOperations(List<DataOperation> dataOperationList);
+    public void setOutResource(IOutResource... outResources);
 
     /**
-     * 对操作进行行为配置.
+     * 取得输入源.
      * 
-     * @param ActionConfiguration
+     * @return
      */
-    public void configure(GenericConfiguration actionConfiguration);
+    public IOutResource[] getOutResource();
 
     /**
-     * Your Methods description is in here.
+     * 生效动作与配置内容.
      * 
      * @param config
      * @return
      * @throws PlatformException
      */
-    public Object doAction(Object config) throws PlatformException;
+    public Object[] fireAction(Object... referent) throws PlatformException;
 }

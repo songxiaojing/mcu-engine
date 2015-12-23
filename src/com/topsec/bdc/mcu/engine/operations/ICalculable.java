@@ -1,5 +1,6 @@
 package com.topsec.bdc.mcu.engine.operations;
 
+import com.topsec.bdc.mcu.engine.configuration.IConfiguration;
 import com.topsec.bdc.platform.core.exception.PlatformException;
 
 
@@ -16,7 +17,7 @@ import com.topsec.bdc.platform.core.exception.PlatformException;
  * @date Oct 8, 2015
  * 
  */
-public interface ICalculable {
+public interface ICalculable extends IConfiguration {
 
     /**
      * 数字型计算类别.
@@ -38,7 +39,7 @@ public interface ICalculable {
      * @return
      * @throws PlatformException
      */
-    public Object calculate(Object data) throws PlatformException;
+    public Object[] calculate(Object... elements) throws PlatformException;
 
     /**
      * 取得计算类别.
