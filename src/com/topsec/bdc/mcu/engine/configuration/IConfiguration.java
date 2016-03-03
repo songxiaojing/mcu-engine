@@ -2,8 +2,6 @@ package com.topsec.bdc.mcu.engine.configuration;
 
 import java.io.Serializable;
 
-import org.json.JSONObject;
-
 
 /**
  * 
@@ -21,21 +19,6 @@ import org.json.JSONObject;
 public interface IConfiguration extends Serializable {
 
     /**
-     * 设置ID.
-     * 
-     * @param id
-     * @return
-     */
-    public String setID(String id);
-
-    /**
-     * 取得ID.
-     * 
-     * @return
-     */
-    public String getID();
-
-    /**
      * 取得类型.
      * 
      * @return
@@ -50,16 +33,17 @@ public interface IConfiguration extends Serializable {
     public void setType(String type);
 
     /**
-     * 取得配置.
+     * 取得配置内容.
      * 
      * @return
      */
-    public JSONObject getConfiguration();
+    public String getConfiguration();
 
     /**
      * 设置配置内容.
      * 
      * @param configuration
      */
-    public void setConfiguration(JSONObject configuration);
+    public void setConfiguration(String configuration);
+
 }

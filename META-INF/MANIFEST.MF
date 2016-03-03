@@ -11,4 +11,7 @@ Bundle-ClassPath: .
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.9.100",
  pf-log;bundle-version="1.0.0",
  pf-core;bundle-version="1.0.0"
+Export-Package: com.topsec.bdc.mcu.engine.configuration,
+ com.topsec.bdc.mcu.engine.workflow,
+ com.topsec.bdc.mcu.engine.workflow.driver
 

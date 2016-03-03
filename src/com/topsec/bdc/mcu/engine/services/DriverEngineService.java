@@ -1,7 +1,8 @@
 package com.topsec.bdc.mcu.engine.services;
 
-import com.topsec.bdc.mcu.engine.driver.IDriver;
 import com.topsec.bdc.mcu.engine.workflow.IWorkflow;
+import com.topsec.bdc.mcu.engine.workflow.driver.DriverStatus;
+import com.topsec.bdc.mcu.engine.workflow.driver.IDriverEngin;
 import com.topsec.bdc.platform.core.exception.PlatformException;
 import com.topsec.bdc.platform.core.metrics.AbstractMetricMBean;
 import com.topsec.bdc.platform.core.services.IService;
@@ -58,11 +59,22 @@ public class DriverEngineService extends AbstractMetricMBean implements IService
     }
 
     /**
+     * Your Methods description is in here.
+     * 
+     * @return
+     * @throws PlatformException
+     */
+    public DriverStatus reportWorkflowStatus() throws PlatformException {
+
+        return null;
+    }
+
+    /**
      * 注消驱动.
      * 
      * @param driver
      */
-    public void unregisterDriver(Class<? extends IDriver> driver) {
+    public void unregisterDriver(Class<? extends IDriverEngin> driver) {
 
     }
 
@@ -71,7 +83,7 @@ public class DriverEngineService extends AbstractMetricMBean implements IService
      * 
      * @param driver
      */
-    public void registerDriver(Class<? extends IDriver> driver) {
+    public void registerDriver(Class<? extends IDriverEngin> driver) {
 
     }
 
@@ -81,6 +93,11 @@ public class DriverEngineService extends AbstractMetricMBean implements IService
      * @return
      */
     public String reportEngineStatus() {
+
+        return null;
+    }
+
+    public String listDriver() {
 
         return null;
     }

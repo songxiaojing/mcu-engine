@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow version="1.0">
+	<driver>Spark</driver>
+	<!--This method takes an URI for the file (either a local path on the machine, or a hdfs://, s3n://, etc URI)  -->
+	<input type="textFile">
+		<path>DKSDIF/SDFKIS/</path>
+		<path>DKSDIF/SDFKIS/</path>
+	</input>
+	<output type="Hadoop.HDFS/Hadoop.HBASE">
+		<source></source>
+	</output>
+	<actions>
+		<action>
+			<map>
+				<operation></operation>
+			</map>
+			<combiner></combiner>
+			<reduce></reduce>
+		</action>
+	</actions>
+</workflow>
