@@ -1,19 +1,12 @@
-package com.topsec.bdc.mcu.engine.workflow.resource.output.spark;
+package com.topsec.bdc.mcu.driver.spark.resource.input;
 
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.rdd.RDD;
 
-import com.topsec.bdc.mcu.engine.workflow.resource.output.ISparkOutputResource;
+import com.topsec.bdc.mcu.driver.spark.resource.ISparkInputResource;
 
 
-public class SparkJDBCOutputResource implements ISparkOutputResource {
-
-    @Override
-    public Object writeResource() throws Exception {
-
-        // TODO Auto-generated method stub
-        return null;
-    }
+public class SparkHDFSInputResource implements ISparkInputResource {
 
     @Override
     public String getType() {
@@ -44,10 +37,10 @@ public class SparkJDBCOutputResource implements ISparkOutputResource {
     }
 
     @Override
-    public void readResource(RDD rdd) throws Exception {
+    public RDD readResource() throws Exception {
 
         // TODO Auto-generated method stub
-
+        return null;
     }
 
     @Override
@@ -56,4 +49,5 @@ public class SparkJDBCOutputResource implements ISparkOutputResource {
         // TODO Auto-generated method stub
 
     }
+
 }

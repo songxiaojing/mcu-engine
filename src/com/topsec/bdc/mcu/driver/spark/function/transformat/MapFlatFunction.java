@@ -1,9 +1,9 @@
-package com.topsec.bdc.mcu.engine.workflow.function.spark.transformat;
+package com.topsec.bdc.mcu.driver.spark.function.transformat;
 
 import java.util.List;
 
+import com.topsec.bdc.mcu.driver.spark.function.ISparkFunction;
 import com.topsec.bdc.mcu.engine.data.CalculateData;
-import com.topsec.bdc.mcu.engine.workflow.function.spark.ISparkFunction;
 
 
 public class MapFlatFunction implements ISparkFunction {

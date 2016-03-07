@@ -1,4 +1,4 @@
-package com.topsec.bdc.mcu.engine.workflow.resource;
+package com.topsec.bdc.mcu.engine.workflow.resource.output;
 
 import com.topsec.bdc.mcu.engine.configuration.IConfiguration;
 

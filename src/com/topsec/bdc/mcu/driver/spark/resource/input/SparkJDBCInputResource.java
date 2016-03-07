@@ -1,12 +1,12 @@
-package com.topsec.bdc.mcu.engine.workflow.resource.input.spark;
+package com.topsec.bdc.mcu.driver.spark.resource.input;
 
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.rdd.RDD;
 
-import com.topsec.bdc.mcu.engine.workflow.resource.input.ISparkInputResource;
+import com.topsec.bdc.mcu.driver.spark.resource.ISparkInputResource;
 
 
-public class SparkHDFSInputResource implements ISparkInputResource {
+public class SparkJDBCInputResource implements ISparkInputResource {
 
     @Override
     public String getType() {

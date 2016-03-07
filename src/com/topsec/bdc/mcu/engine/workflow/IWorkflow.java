@@ -2,8 +2,8 @@ package com.topsec.bdc.mcu.engine.workflow;
 
 import com.topsec.bdc.mcu.engine.configuration.IConfiguration;
 import com.topsec.bdc.mcu.engine.workflow.driver.IDriverEngin;
-import com.topsec.bdc.mcu.engine.workflow.resource.IInputResource;
-import com.topsec.bdc.mcu.engine.workflow.resource.IOutputResource;
+import com.topsec.bdc.mcu.engine.workflow.resource.input.IInputResource;
+import com.topsec.bdc.mcu.engine.workflow.resource.output.IOutputResource;
 import com.topsec.bdc.platform.core.exception.PlatformException;
 import com.topsec.bdc.platform.core.services.IService;
 

@@ -1,12 +1,12 @@
-package com.topsec.bdc.mcu.engine.workflow.resource.output.spark;
+package com.topsec.bdc.mcu.driver.spark.resource.output;
 
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.rdd.RDD;
 
-import com.topsec.bdc.mcu.engine.workflow.resource.output.ISparkOutputResource;
+import com.topsec.bdc.mcu.driver.spark.resource.ISparkOutputResource;
 
 
-public class SparkHBaseOutputResource implements ISparkOutputResource {
+public class SparkJDBCOutputResource implements ISparkOutputResource {
 
     @Override
     public Object writeResource() throws Exception {
